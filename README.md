@@ -2,8 +2,8 @@
 
 Play in your browser: **https://kingtitusiii.github.io/chance-run-web/**
 
-A wholesome open-neighborhood delivery game. Ride through town, deliver kindness, make everyone's day.
+A wholesome open-neighborhood helping game. Walk the town, talk to everyone, and lend a hand: deliveries, escorting neighbors, insulin runs, feeding the hungry, flowers for low spirits, and more.
 
-**Controls:** WASD ride · Space jump · Shift drift (hold for boost) · Q/E manual/wheelie · F interact · Esc pause
+**Controls:** WASD walk (8-way) · hold R to aim a package throw · F to talk to villagers · Esc pause
 
 Built with Unity 6. This repo holds only the built game; the source lives in a private repository.
