@@ -104,8 +104,17 @@
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        var fitCanvas = function () {
+          var w = window.innerWidth || document.documentElement.clientWidth;
+          var h = window.innerHeight || document.documentElement.clientHeight;
+          if (!w || !h) { setTimeout(fitCanvas, 250); return; }
+          var scale = Math.min(w / 960, (h - 60) / 600);
+          scale = Math.max(scale, 0.4);
+          canvas.style.width = Math.round(960 * scale) + "px";
+          canvas.style.height = Math.round(600 * scale) + "px";
+        };
+        fitCanvas();
+        window.addEventListener('resize', fitCanvas);
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
