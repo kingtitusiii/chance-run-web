@@ -20,6 +20,9 @@ villagers, carry parcels, and watch the whole town bloom because of you.
 - **Market day** every 7th day: extra stalls, delivery tips
 - **Cozy verbs** — fish (10 species + one golden rumor), stargaze, garden,
   pet everything, ride Jonas's bike (ring the bell), take photos
+- **Make it yours** — pick a name in Profile (email or wallet sign-in
+  optional), climb three leaderboards, and save your snapped photos as
+  real PNGs from the Memories screen
 
 ## Controls
 
@@ -33,8 +36,11 @@ villagers, carry parcels, and watch the whole town bloom because of you.
 | Map / photo | M / P | — |
 | Pause & menus | Esc | II |
 
-Saves persist in your browser. Options include reduced motion, large text,
-relaxed timers, and quick days.
+Saves persist in your browser, and the **Save data ⇄** screen exports your
+town to the clipboard so you can import it on another device. Options include
+master/music volume, fullscreen, reduced motion, large text, relaxed timers,
+and quick days. The game auto-pauses when you tab away.
 
-Built with Unity 6. This repo holds only the built game; the source lives in
-a private repository.
+Built with Unity 6 (v0.2.0). This repo holds only the built game; the source
+lives in a private repository. Desktop (Steam-ready) builds exist for macOS
+and Windows.
