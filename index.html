@@ -6,12 +6,32 @@
     <title>Chance Run — help your town</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+      <meta name="description" content="A wholesome pixel town where every delivery makes someone's day. Play free in your browser.">
+    <meta property="og:title" content="Chance Run — help your town">
+    <meta property="og:description" content="A wholesome pixel town where every delivery makes someone's day. Play free in your browser.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kingtitusiii.github.io/chance-run-web/">
+    <meta name="theme-color" content="#16202b">
+    <style>
+      body { background: #16202b; }
+      #unity-container.unity-desktop { background: #16202b; }
+      .cr-load-title { color: #ffd24d; font-family: 'Courier New', monospace; font-weight: bold;
+        font-size: 34px; letter-spacing: 8px; text-align: center; margin-bottom: 18px;
+        text-shadow: 0 3px 0 rgba(0,0,0,0.45); }
+      .cr-load-sub { color: #9fb8a8; font-family: 'Courier New', monospace; font-size: 14px;
+        text-align: center; margin-top: 16px; min-height: 18px; }
+      #unity-progress-bar-empty { background: #0d141c; border: 2px solid #3a4a5c;
+        width: 260px; height: 20px; border-radius: 0; margin: 0 auto; background-image: none; }
+      #unity-progress-bar-full { background: #ffd24d; height: 100%; border-radius: 0; background-image: none; }
+      #unity-build-title { color: #9fb8a8; font-family: 'Courier New', monospace; }
+    </style>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
+        <div class="cr-load-title">CHANCE&nbsp;RUN</div>
+        <div class="cr-load-sub" id="cr-tip">Loading the town…</div>
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
         </div>
@@ -137,6 +157,24 @@
 
       document.body.appendChild(script);
 
+    </script>
+      <script>
+      (function () {
+        var tips = [
+          'Tip: the gold arrow points to your mission',
+          'Tip: press F to chat with neighbors',
+          'Tip: press P to snap a photo — save it from Memories',
+          'Tip: gifts make friendships bloom faster',
+          'Tip: helped folks light up the whole town'
+        ];
+        var i = 0;
+        var timer = setInterval(function () {
+          var el = document.getElementById('cr-tip');
+          var bar = document.getElementById('unity-loading-bar');
+          if (!el || !bar || bar.style.display === 'none') { clearInterval(timer); return; }
+          el.textContent = tips[i++ % tips.length];
+        }, 2600);
+      })();
     </script>
   </body>
 </html>
